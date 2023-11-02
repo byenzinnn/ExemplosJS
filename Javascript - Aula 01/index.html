@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        const nome = "Gabriel";
+        const sobrenome = "Silva";
+        console.log(nome + " " + sobrenome);
+
+        function emiteAlerta(){
+            alert('Você clicou em um botao');
+            console.log("a funcao emiteAlerta() foi adicionada");
+            console.error("Mensagens de erro");
+            console.warn("Um erro que nao é grave");
+            console.info("Mensagem de informação");
+            console.table([555,2222,555]);
+        }
+
+        const emiteError = function(){
+            console.error("Isso é uma função em uma variavel");
+        }
+
+        const emiteAlertaHover = function(){
+            console.warn("Outra função");
+        }
+
+        // Pegando elementos com JS
+        const alteraH1 = function(){
+            const h1 = document.querySelector('h1');
+            h1.innerText = "Valor alterado";
+        }
+
+        const calculaTabuada = function(valor){
+            const tabuada = document.querySelector("#tabuada");
+            tabuada.innerText = "";
+            for(i = 0; i <= 10; i++){
+                tabuada.innerHTML += `<p>${i} x ${valor} = ${i*valor} </p>`;
+                
+            }
+        }
+        
+    </script>
+    
+    <button onclick="emiteAlerta()" class="botao">
+        clique aqui
+    </button>
+
+    <h1 onmouseleave="emiteError()">AAAAAAAAAAAAA</h1>
+    <br>
+    <h1 onmouseenter="emiteAlertaHover()">AAAAAAAAAAAAA</h1>
+    <br>
+    <div id="tabuada" onclick="calculaTabuada()">adegeg</div>
+    
+</body>
+</html>
