@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>X</label>
+        <input type="number" name="numero_x">
+        <br>
+        <label>Y</label>
+        <input type="number" name="numero_y">
+        <br>
+        <button type="button" onclick="bt_soma(this)">Somar</button>
+        <button type="button" onclick="bt_subtrai(this)">Subtrair</button>
+        <button type="button" onclick="bt_multiplica(this)">Multiplicar</button>
+        <button type="button" onclick="bt_divisao(this)">Dividir</button>
+        <button type="button" onclick="bt_restoDivisao(this)">Resto da Divisao</button>
+        <button type="button" onclick="bt_potencia(this)">Potencia</button>
+        <button type="button" onclick="bt_limpar(this)">Limpar</button>
+        <p id="resultado"></p>
+    </form>
+    
+    <script src="./js/index.js"></script>
+    <script type="text/javascript">
+        const bt_soma = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+            
+            document.querySelector('#resultado').innerText = soma
+                (numero_x, numero_y);
+
+            }
+
+        const bt_subtrai = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+
+            document.querySelector('#resultado').innerText = subtracao
+                (numero_x, numero_y);
+        }
+
+        const bt_multiplica = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+
+            document.querySelector('#resultado').innerText = multiplicacao
+                (numero_x, numero_y);
+        }
+
+        const bt_divisao = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+
+            document.querySelector('#resultado').innerText = divisao
+                (numero_x, numero_y);
+        }
+
+        const bt_restoDivisao = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+
+            document.querySelector('#resultado').innerText = restoDivisao
+                (numero_x, numero_y);
+        }
+
+        const bt_potencia = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value;
+            const numero_y = document.querySelector('input[name="numero_y"]').value;
+
+            document.querySelector('#resultado').innerText = potencia
+                (numero_x, numero_y);
+        }
+
+        const bt_limpar = function(){
+            const numero_x = document.querySelector('input[name="numero_x"]').value = "";
+            const numero_y = document.querySelector('input[name="numero_y"]').value = "";
+
+            document.querySelector('#resultado').innerText = "";
+                (numero_x, numero_y);
+            
+            const botoes = document.querySelectorAll
+            ('button');
+
+            for(botao of botoes){
+                botao.style.color="buttontext";
+                
+            }
+        }
+
+    </script>
+</body>
+</html>
