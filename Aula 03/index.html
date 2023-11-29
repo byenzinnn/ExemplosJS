@@ -23,8 +23,12 @@
     <div class="secoes">   
             <section>
                 <label>Digite algo: </label>
-                <input type="text" name="myInput">
+                <input type="text" name="myInput" class="myInput"
+                onkeyup="pegaInput(this)"/>
                 <h1>Numbers</h1>
+                <div id="render_number">
+
+                </div>
             </section>
             <section>
                 <h1>Arrays</h1>
