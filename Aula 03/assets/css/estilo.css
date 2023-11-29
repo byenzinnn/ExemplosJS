@@ -4,11 +4,13 @@
     margin: 0 auto;
     align-items: center;
     text-align: center;
+    cursor: default;
 }
 
 .secoes {
-    background-color: azure;
-    padding: 5px
+    background-color: rgb(60, 84, 84);
+    padding: 5px;
+    color: white;
 }
 
 .string{
@@ -31,4 +33,5 @@ input {
 input:hover {
     background-color: aliceblue;
     animation-name: none;
+    cursor: default;
 }
