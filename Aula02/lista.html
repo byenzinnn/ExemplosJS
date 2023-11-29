@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/vetor.js">
     <title>Document</title>
+    <style>
+        header span {font-size: 0.5em;}
+        header span:hover {cursor: pointer;
+        color: blueviolet}
+        #render{display: flex;}
+    </style>
 </head>
 <body>
-    
+    <header>
+        <span onclick="exibe_veiculos()">Veiculos</span>
+        <span>Verduras</span>
+        <span>Legumes</span>
+
+    </header>
+    <div id="render"></div>
 </body>
 </html>
