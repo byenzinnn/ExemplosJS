@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.jogo {
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+input {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
