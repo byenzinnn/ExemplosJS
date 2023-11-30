@@ -26,7 +26,7 @@
         <h1>Jogo da Forca</h1>
         <p id="word-display"></p>
         <p id="error-count">Erros restantes: 3</p>
-        <input type="text" id="guess-input" placeholder="Digite uma letra">
+        <input type="text" id="guess-input" class="input" name="text">
         <button onclick="guessLetter()">Enviar</button>
     </div>
 
@@ -38,6 +38,7 @@
         let palavraEscondida = [];
         let errosRestantes = 3;
         let pontos = 0;
+        let contAlert = 0;
 
         // Inicializa o jogo
         function iniciarJogo() {
@@ -82,6 +83,14 @@
                     // O jogador ganhou
                     alert(`Parabéns! Você acertou a palavra. Pontuação: ${pontos + 100}`);
                     pontos += 100;
+                    if (pontos >= 200 && pontos < 400 && contAlert == 0) {
+                        alert("Você é bom nisso!");
+                        contAlert = 1;
+                    } else
+                    if(pontos >= 800 && contAlert == 1){
+                        alert("Você é muito bom!");
+                        contAlert = 0;
+                    }
                     iniciarJogo();
                 }
             } else {
@@ -91,6 +100,7 @@
 
                 // Verifica se o jogador perdeu
                 if (errosRestantes === 0) {
+                    pontos -= 50;
                     alert(`Game Over! A palavra era: ${palavraAtual}. Pontuação: ${pontos}`);
                     iniciarJogo();
                 }
@@ -115,6 +125,8 @@
 
         // Inicia o jogo quando a página carrega
         window.onload = iniciarJogo;
+
+
     </script>
 </body>
 
